@@ -1,11 +1,11 @@
 import random
-
+# testing
 while True:
     def full_game():
         game_array = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
         board_sample = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         filled_squares = []
-        #i = 0  # turn counter
+        # i = 0  # turn counter
 
         def print_board_sample():
             print()
@@ -35,15 +35,17 @@ while True:
         print('\nLet\'s play!')
 
         def human_vs_human():
-                
+
             turn = 'X'
             i = 0
             while i <= 9:
 
-                player_input = input('\nPlayer %s, which square would you like?' % (turn))
+                player_input = input(
+                    '\nPlayer %s, which square would you like?' % (turn))
 
                 if player_input.isalpha() == True or int(player_input) not in list(range(1, 10)):
-                    print('\nThat is not a valid input. Please try again. Remember, the squares are labeled from 1-9 based on this picture: \n')
+                    print(
+                        '\nThat is not a valid input. Please try again. Remember, the squares are labeled from 1-9 based on this picture: \n')
                     print_board_sample()
 
                 elif game_array[int(player_input) - 1] == 'X' or game_array[int(player_input) - 1] == 'O':
@@ -97,17 +99,19 @@ while True:
                     break
 
         def human_vs_computer():
-                
+
             player = input('What is your name?')
 
             computer = 'O'
             i = 0
             while i <= 9:
 
-                player_input = input('\n%s, your turn! Which square would you like?' % (player))
+                player_input = input(
+                    '\n%s, your turn! Which square would you like?' % (player))
 
                 if player_input.isalpha() == True or int(player_input) not in list(range(1, 10)):
-                    print('\nThat is not a valid input. Please try again. Remember, the squares are labeled from 1-9 based on this picture: \n')
+                    print(
+                        '\nThat is not a valid input. Please try again. Remember, the squares are labeled from 1-9 based on this picture: \n')
                     print_board_sample()
 
                 elif game_array[int(player_input) - 1] == 'X' or game_array[int(player_input) - 1] == 'O':
@@ -118,17 +122,17 @@ while True:
                     i += 1
 
                     while i < 9:
-                        computer_turn = random.randint(1,9)
+                        computer_turn = random.randint(1, 9)
                         if game_array[computer_turn - 1] == ' ':
                             game_array[computer_turn - 1] = 'O'
-                            print('\nComputer plays square %i.' % (computer_turn))
+                            print('\nComputer plays square %i.' %
+                                  (computer_turn))
                             game_board()
                             i += 1
                             break
                         else:
                             continue
-                            
-                        
+
                 if game_array[0] == game_array[1] == game_array[2] != ' ':  # top row
                     print('\nGame over! Player %s wins!' % (game_array[0]))
                     break
@@ -167,7 +171,7 @@ while True:
 
         if game_mode.lower() == 'human':
             human_vs_human()
-        
+
         elif game_mode.lower() == 'computer':
             human_vs_computer()
 
