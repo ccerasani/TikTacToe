@@ -135,38 +135,47 @@ while True:
 
                 if game_array[0] == game_array[1] == game_array[2] != ' ':  # top row
                     print('\nGame over! Player %s wins!' % (game_array[0]))
+                    game_board()
                     break
 
                 elif game_array[3] == game_array[4] == game_array[5] != ' ':  # middle row
                     print('\nGame over! Player %s wins!' % (game_array[3]))
+                    game_board()
                     break
 
                 elif game_array[6] == game_array[7] == game_array[8] != ' ':  # bottom row
                     print('\nGame over! Player %s wins!' % (game_array[6]))
+                    game_board()
                     break
 
                 elif game_array[0] == game_array[3] == game_array[6] != ' ':  # left column
                     print('\nGame over! Player %s wins!' % (game_array[0]))
+                    game_board()
                     break
 
                 elif game_array[1] == game_array[4] == game_array[7] != ' ':  # middle column
                     print('\nGame over! Player %s wins!' % (game_array[1]))
+                    game_board()
                     break
 
                 elif game_array[2] == game_array[5] == game_array[8] != ' ':  # right column
                     print('\nGame over! Player %s wins!' % (game_array[2]))
+                    game_board()
                     break
 
                 elif game_array[0] == game_array[4] == game_array[8] != ' ':  # diagonal
                     print('\nGame over! Player %s wins!' % (game_array[0]))
+                    game_board()
                     break
 
                 elif game_array[2] == game_array[4] == game_array[6] != ' ':  # diagonal
                     print('\nGame over! Player %s wins!' % (game_array[2]))
+                    game_board()
                     break
 
                 elif i == 9:
-                    print('Tie Game!')
+                    print('\nTie Game!')
+                    game_board()
                     break
 
         if game_mode.lower() == 'human':
