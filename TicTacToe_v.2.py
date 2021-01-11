@@ -1,5 +1,5 @@
 import random
-
+#stupid
 while True:
     def full_game():
         game_array = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
