@@ -1,3 +1,5 @@
+print('( ͡❛ ͜ʖ ͡❛)')
+
 import random
 #stupid
 while True:
